@@ -3,7 +3,7 @@ This is a school project where I implemented in Verilog simple single cycle CPU 
 
 # Processor design figures
 ![](screenshots/05.png)
-![](screenshots/04.png)
-![](screenshots/03.png)
-![](screenshots/02.png)
 ![](screenshots/01.png)
+![](screenshots/02.png)
+![](screenshots/03.png)
+![](screenshots/04.png)
