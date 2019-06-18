@@ -1,0 +1,64 @@
+00000000 //                    start label
+2011000C // addi $17, $0, 0xC   store address where array begins
+8C120008 // lw $18, 0x8($0)     store size of array
+00112020 // add $4, $0, $17     fction param array pointer
+00122820 // add $5, $0, $18     fction param array size, n elements
+0C000008 // jal 8
+AC020004 // sw $2, 0x4($0)      store value from return fce
+0C000007 // end program--------------------------------------------
+00000000 //                    max label
+23EC0000 // addi t4, $31, 0  addi $12, $31, 0 saving register from jal
+20080000 // addi  $8, $0, 0x0   index of array set to zero
+8C8A0000 // lw $10, 0x0($4)     max value in array
+10A0000A // beq $5, $0, 10      size array equal zero jump to done1 label
+00000000 //                    for label
+10A8000C // beq $5, $8, 12       index and size array equal jump done2 label
+8C890000 // lw $9, 0x0($4)      array value at index $8 and address $4
+0149582A // slt $11, $10, $9    if $10 < $9 (max < 9)
+11600001 // beq $11, $0, 1      
+212A0000 // addi $10, $9, 0x0   set new max from $9
+00000000 //                    noNewMax label
+21080001 // addi $8, $8, 0x1    increment index
+20840004 // addi $4, $4, 0x4    increment address
+0C00000D // jal 13              
+00000000 //                    done1 label
+20020000 // addi $2, $0, 0x0
+219F0000 // addi $31, $12, 0   load jal
+1FE00008 // jr $31
+00000000 //                    done2 label
+21420000 // addi $2, $10, 0x0 
+219F0000 // addi $31, $12, 0  load jal
+1FE00008 // jr $31
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
